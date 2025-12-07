@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: backend
+pokeapi:
+  baseurl: https://pokeapi.co/api/v2/
+  fallback_sprite: https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/0.png
+
+logging:
+  level:
+    hu.dlaszlo: DEBUG
+    org.springframework.cache: DEBUG
+    org.springframework.cache.interceptor.CacheInterceptor: TRACE
+    org.springframework.aop: TRACE
+    org.springframework.retry: TRACE
+    org.springframework.web.client: DEBUG

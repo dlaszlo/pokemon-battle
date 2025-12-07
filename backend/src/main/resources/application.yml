@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: backend
+pokeapi:
+  baseurl: https://pokeapi.co/api/v2/
+  fallback_sprite: https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/0.png

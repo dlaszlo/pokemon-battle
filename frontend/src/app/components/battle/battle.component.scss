@@ -1,0 +1,57 @@
+.battle-container {
+  padding: 20px;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.error-msg {
+  color: red;
+  margin-bottom: 20px;
+}
+
+.arena {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.fighter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.2rem;
+  }
+}
+
+.vs {
+  font-size: 20px;
+  font-weight: bold;
+
+  .status {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    font-style: italic;
+  }
+}
+
+.controls {
+  margin-top: 30px;
+
+  .result {
+    color: green;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+}

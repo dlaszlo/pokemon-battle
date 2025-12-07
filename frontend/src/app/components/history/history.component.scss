@@ -1,0 +1,61 @@
+.history-container {
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  margin-bottom: 20px;
+  text-align: center;
+
+  input {
+    width: 100%;
+    max-width: 400px;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+}
+
+.error-msg {
+  color: red;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+
+  th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #eee;
+  }
+
+  thead {
+    background-color: #f2f2f2;
+
+    th {
+      font-weight: bold;
+      color: #333;
+    }
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: #fafafa;
+  }
+
+  .empty-state {
+    text-align: center;
+    padding: 20px;
+    color: #888;
+  }
+}

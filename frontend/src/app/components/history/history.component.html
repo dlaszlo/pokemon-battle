@@ -1,0 +1,50 @@
+<div class="history-container">
+
+  <h2>Battle History</h2>
+
+  <div class="search-bar">
+    <input
+      type="text"
+      placeholder="Search by name..."
+      (input)="onSearch($event)"
+    />
+  </div>
+
+  <div *ngIf="errorMessage" class="error-msg">
+    {{ errorMessage }}
+  </div>
+
+  <table class="history-table">
+    <thead>
+    <tr>
+      <th>Winner Name</th>
+      <th>Winner Type</th>
+      <th>Winner Power</th>
+
+      <th>Loser Name</th>
+      <th>Loser Type</th>
+      <th>Loser Power</th>
+
+      <th>Time</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let battle of battles">
+      <td>{{ getWinner(battle).name }}</td>
+      <td>{{ getWinner(battle).types }}</td>
+      <td>{{ getWinner(battle).power }}</td>
+
+      <td>{{ getLoser(battle).name }}</td>
+      <td>{{ getLoser(battle).types }}</td>
+      <td>{{ getLoser(battle).power }}</td>
+
+      <td>{{ battle.createdAt | date:'yyyy.MM.dd. HH:mm' }}</td>
+    </tr>
+
+    <tr *ngIf="battles.length === 0 && !errorMessage">
+      <td colspan="7" class="empty-state">No battles to display.</td>
+    </tr>
+    </tbody>
+  </table>
+
+</div>

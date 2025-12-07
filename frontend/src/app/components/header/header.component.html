@@ -1,0 +1,14 @@
+<header class="app-header">
+  <div class="logo">Pokemon App</div>
+  <nav>
+    <ul>
+      <li *ngFor="let item of navItems">
+        <a [routerLink]="item.path"
+           routerLinkActive="active"
+           [routerLinkActiveOptions]="{exact: true}">
+          {{ item.label }}
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>

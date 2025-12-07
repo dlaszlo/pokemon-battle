@@ -1,0 +1,43 @@
+<div class="battle-container">
+  <h2>Pokemon Battle</h2>
+
+  <div *ngIf="errorMessage" class="error-msg">
+    {{ errorMessage }}
+  </div>
+
+  <div *ngIf="isLoading && !battle && !errorMessage">
+    Loading battle...
+  </div>
+
+  <div *ngIf="battle" class="arena">
+    <div class="fighter">
+      <h3>Player 1</h3>
+      <app-pokemon-card [pokemon]="battle.first"></app-pokemon-card>
+    </div>
+
+    <div class="vs">
+      VS
+      <div *ngIf="isSimulating" class="status">
+        Simulating battle...
+      </div>
+    </div>
+
+    <div class="fighter">
+      <h3>Player 2</h3>
+      <app-pokemon-card [pokemon]="battle.second"></app-pokemon-card>
+    </div>
+  </div>
+
+  <div class="controls" *ngIf="battle">
+    <div *ngIf="isFinished() && !isSimulating" class="result">
+      {{ battle.winnerSide === 'DRAW'
+      ? 'Result: Draw'
+      : 'Winner: ' + getWinnerName()
+      }}
+    </div>
+
+    <button (click)="startNewBattle()" [disabled]="isLoading || isSimulating">
+      {{ battle ? 'Next Battle' : 'Start Battle' }}
+    </button>
+  </div>
+</div>
